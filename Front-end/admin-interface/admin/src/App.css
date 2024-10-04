@@ -1,0 +1,44 @@
+.unorder {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.unorder a {
+  text-decoration: none;
+  padding: 5px 80px;
+  color: black;
+  font-weight: bolder;
+}
+.unorder a:hover {
+  background-color: orange;
+  color: black;
+}
+
+.outStyle {
+  width: 80%;
+  background-color: blueviolet;
+  margin: auto;
+  padding: 15px;
+}
+.fromStyle {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.active {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.click {
+  background-color: rgb(127, 11, 236);
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.click:hover {
+  background-color: orange;
+}

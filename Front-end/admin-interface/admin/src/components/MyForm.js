@@ -10,15 +10,33 @@ export default function MyForm() {
     });
 
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        fetch('http://127.0.0.1:3000/api/products', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+
+            body: JSON.stringify(formInputs),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log('Success', data);
+        })
+        .catch((error) => {
+            console.log('Error', error);
+        });
+    };
+
+
     return (
         <div className="outStyle">
 
             
             <form className="fromStyle"
-            onSubmit={(event) => {
-                event.preventDefault();
-                console.log(formInputs);
-            }}
+            onSubmit={handleSubmit}
             >
 
                 <h2 style={{textAlign: "center"}}>Here you can change data</h2>
